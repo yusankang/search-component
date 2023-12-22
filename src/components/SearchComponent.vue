@@ -5,8 +5,8 @@
         ><input
           type="text"
           id="searchInput"
-          class="form-control border-0 shadow-sm p-3 text-secondary
-          fs-2 text-center w-100 shadow-none"
+          class="form-control border-0 shadow-sm p-3 text-secondary fs-2 text-center
+          w-100 shadow-none"
           placeholder="City or State"
           v-model="searchQuery"
       /></label>
@@ -14,14 +14,11 @@
 
     <p class="m-0 pt-3 text-center text-danger" v-if="noDataMessage">No data available</p>
 
-    <div
-      v-if="filteredCities.length !== 0"
-      class="display-list m-0 position-absolute"
-    >
+    <div v-if="filteredCities.length !== 0" class="display-list m-0 position-absolute">
       <ul class="suggestions list-unstyled">
         <li
-          class="border-bottom p-3 text-secondary d-flex justify-content-between
-          align-items-cente shadow-sm"
+          class="border-bottom p-3 text-secondary d-flex
+          justify-content-between align-items-cente shadow-sm"
           v-for="city in filteredCities"
           :key="city"
         >
